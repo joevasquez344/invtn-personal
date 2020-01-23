@@ -1,0 +1,6 @@
+.top-nav{
+  height: 3vh;
+  background:gray;
+
+  background-image: linear-gradient(to left, black, black, black, red, red);
+}

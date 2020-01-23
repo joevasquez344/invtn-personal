@@ -1,0 +1,229 @@
+.landing{
+
+    .showcase{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 85vh;
+
+        .showcase-button{
+            color:black;
+            padding: .4rem 4rem;
+            border:none;
+            border: 1px red solid;
+            margin-top: 5rem;
+            font-weight: bold;
+            background-color: transparent;
+            color:white;
+
+            
+
+            &:focus{
+                outline: none;
+            }
+
+    
+
+            
+        }
+
+        .arrows-custom{
+            color:white !important;
+            position: absolute;
+            bottom: 100px;
+        }
+
+        .showcase-image{
+            position: absolute;
+            background: url('../../images/banner-1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 85vh;
+            z-index: -1;
+            
+        }
+    }
+}
+
+.products-category-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+   
+}
+
+.category-box{
+    height: 30vh;
+    width: 80vw;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    color:white !important;
+    font-size: 2rem;
+    margin: 1.3rem auto;
+    box-shadow: 0px 2px 5px black;
+
+    .custom-button {
+        
+    }
+    
+    .t-shirts-image{
+        background:url('../../images/shirt.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -1;
+        height: 30vh;
+        width: 80vw;
+    }
+    .hoodies-image{
+        background:url('../../images/hoodie.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -1;
+        height: 30vh;
+        width: 80vw;
+    }
+    .hats-image{
+        background:url('../../images/hat.jpeg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -1;
+        height: 30vh;
+        width: 80vw;
+    }
+    .beanies-image{
+        background:url('../../images/beanie.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        z-index: -1;
+        height: 30vh;
+        width: 80vw;
+    }
+    
+}
+
+
+
+
+@media(min-width: 700px) {
+    .landing{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        'hero hero hero hero'
+        'cat cat cat cat'
+        'other other other other'
+        ;
+       
+        grid-gap: 20px;
+    
+        .showcase {
+            grid-area: hero;
+            height: 55vh;
+            background:url(../../images/banner-1.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .products-category-wrapper{
+            height: 30vh;
+            padding: 1.1rem;
+            grid-area: cat;
+            display:grid;
+            grid-gap: 20px;
+            grid-template-columns: (4, 1fr);
+            grid-template-areas: 
+            'cat-1 cat-2 cat-3 cat-4'
+            ;
+    
+            .category-box {
+                border-radius: 3px;
+                
+                .button-custom {
+                    position: relative;
+                    top: calc(100% - 16%);
+                    padding: .4rem 2rem;
+                    border:none;
+                    font-weight: 800;
+                    &:hover {
+                        background: black;
+                        color:white;
+                    }
+                    &:focus {
+                        outline:none;
+                    }
+                    
+                }
+            }
+    
+            .cat-1{
+                grid-area: cat-1;
+                background: url('../../images/shirt.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border:none;
+                box-shadow: 0px 2px 5px black;
+            }
+            .cat-2{
+                grid-area: cat-2;
+                background: url('../../images/hoodie.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border:none;
+                box-shadow: 0px 2px 5px black;
+            }
+            .cat-3{
+                grid-area: cat-3;
+                background: url('../../images/beanie.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border:none;
+                box-shadow: 0px 2px 5px black;
+            }
+            .cat-4{
+                grid-area: cat-4;
+                border: 1px solid black;
+            }
+        }
+    
+        .other-category-wrapper{
+            height: 35vh;
+            grid-area: other;
+            display:grid;
+            grid-gap: 20px;
+            grid-template-columns: 1fr 2fr 2fr 1fr;
+            grid-template-areas: 
+            ' . other-1 other-2 . '
+            ;
+            margin-top: 1.3rem;
+            border: 1px solid black;
+           
+            .other-1{
+                grid-area: other-1;
+                border: 1px solid black;
+            }
+            .other-2{
+                grid-area: other-2;
+                border: 1px solid black;
+            }
+        }
+    }
+    
+}
+

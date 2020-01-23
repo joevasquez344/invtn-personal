@@ -1,0 +1,21 @@
+.shirts-item{
+    padding: 1.3rem;
+    border:black 1px solid;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    'image content-wrapper'
+    ;
+
+    .image{
+        border: 1px solid black;
+        width: 300px;
+        grid-area:image;
+    }
+
+    .content-wrapper{
+        grid-area: content-wrapper;
+        
+    }
+}
+

@@ -1,0 +1,14 @@
+.navbar-custom {
+    background: black !important;
+}
+
+.custom-burger{
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+.cart-icon {
+    margin-right: 10px;
+}
